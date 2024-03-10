@@ -37,15 +37,16 @@ body {
 }
 
 form {
-    width: 40%; /* Set form width */
+    width: 40%; 
     padding: 60px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    position: absolute; /* Position form absolutely */
-    top: 50%; /* Center vertically */
-    left: 53%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Move form back by half of its own width and height */
+    position: absolute; 
+    top: 50%; 
+    left: 53%; 
+    transform: translate(-50%, -50%); 
+    opacity: 1;
 }
 
 input[type="submit"]{
