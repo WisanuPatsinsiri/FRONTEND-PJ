@@ -8,12 +8,12 @@
 }
 
 header{
-    position:fixed;
+    position:relative;
     top: 0;
     left: 0;
     width: 100%;
     padding: 30px 100px;
-    background-color: rgb(233, 150, 122);
+    background-color:transparent;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -30,7 +30,8 @@ header{
     width: auto;
     height: auto;
     z-index: -1;
-    object-fit: cover; 
+    object-fit: cover;
+    filter: blur(6px);
 }
 .PawnShop{
     font-size: 2em;
@@ -69,6 +70,14 @@ a:first-child {
 
 a:last-child {
     margin-left: 0;
+}
+
+.THEPAWN{
+    align-items: center;
+    align-content: center;
+    margin-top: 450px;
+    font-size: 60px;
+    color: #fff;
 }
 
 
