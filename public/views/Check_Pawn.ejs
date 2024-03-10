@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <table>
+        <tr>
+            <th>Number</th>
+            <th>Customer Id</th>
+            <th>Customer Name</th>
+            <th>Name</th>
+            <th>Value</th>
+            <th>Status</th>
+            <th>Confirm</th>
+        </tr>
+        <% var Count = 1%>
+            <% for(let i = 0; i < Items.length; i++){%>
+                <tr>
+                    <% if(Items[i].Status == 'False') { %>
+                        <td>
+                            <%= Count++%>
+                        </td>
+                        <td>
+                            <%for(let n = 0; n < Customers.length;n++){%>
+                                <%if(Items[i].Customer_Id == Customers[n].Customer_Id) {%>
+                                    <%= Customers[n].Customer_Id %>
+                                        <%break%>
+                                            <%}%>
+                                                <%}%>
+                        </td>
+                        <td>
+                            <%for(let n = 0; n < Customers.length;n++){%>
+                                <%if(Items[i].Customer_Id == Customers[n].Customer_Id) {%>
+                                    <%= Customers[n].Name %>
+                                        <%break%>
+                                            <%}%>
+                                                <%}%>
+                        </td>
+                        </td>
+                        <td>
+                            <%= Items[i].Name %>
+                        </td>
+                        <td>
+                            <%= Items[i].Value %>
+                        </td>
+                        <td>
+                            รอการตรวจสอบ
+                        </td>
+                        <td>
+
+                            <a href="/Confirm/<%= Items[i].Product_Id%>">ยืนยันการจำนำ</a>
+                        </td>
+
+                </tr>
+                <%}%>
+                    <%}%>
+    </table>
+    <a href="/admin">กลับ</a>
+
+</body>
+
+</html>

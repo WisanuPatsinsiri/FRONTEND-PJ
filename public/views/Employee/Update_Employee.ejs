@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/updateEm.css">
+</head>
+
+<body>
+    
+        <form action="/Put_Employee/<%= Employee.Employee_Id%>" method="post">
+            <h1>
+                Update Employee ID: 
+    <%= Employee.Employee_Id%>
+            </h1>
+            <input type="text" id="Name" placeholder="Enter Name: " name="Name" value="<%=Employee.Name%>">
+            <br>
+
+
+            <input type="text" id="Phone" placeholder="Enter Phone Number: " name="Phone" value="<%=Employee.Phone%>">
+            <br>
+
+
+            <input type="text" id="Salary" placeholder="Enter Salary: " name="Salary" value="<%=Employee.Salary%>">
+            <br>
+
+
+            <input type="text" id="Post" placeholder="Enter Position: " name="Post" value="<%=Employee.Post%>">
+            <br>
+
+
+            <input type="submit" value="Update">
+            <a href="/Employee_Page">กลับ</a>
+        </form>
+</body>
+
+</html>

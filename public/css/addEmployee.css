@@ -1,0 +1,62 @@
+body {
+    background-color: #c9d6ff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    width: 500px;
+    margin:0 auto 440px auto;
+    padding:50px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+label {
+    margin-bottom: 10px; /* เพิ่ม margin-bottom เพื่อเพิ่มระยะห่างระหว่าง label */
+}
+
+input[type="text"] {
+    width: 100%; /* กำหนดให้ input และปุ่มมีความกว้างเต็มรูปแบบ */
+    padding: 10px; /* เพิ่ม padding เพื่อให้ input และปุ่มมีขนาดใหญ่ขึ้น */
+    margin-bottom: 10px; /* เพิ่ม margin-bottom เพื่อเพิ่มระยะห่างระหว่าง input และปุ่ม */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    width: auto; /* กำหนดให้ input และปุ่มมีความกว้างเต็มรูปแบบ */
+    padding: 8px 12px; /* เพิ่ม padding เพื่อให้ input และปุ่มมีขนาดใหญ่ขึ้น */
+    margin-bottom: 10px; /* เพิ่ม margin-bottom เพื่อเพิ่มระยะห่างระหว่าง input และปุ่ม */
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}

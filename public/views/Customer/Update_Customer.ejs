@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/updateCus.css">
+</head>
+
+<body>
+    <div class="container">
+            <form action="/Put_Customer/<%= Customer.Customer_Id%>" method="post">
+                <h1>Update Customer ID: <%= Customer.Customer_Id%></h1>
+
+        <input type="text" placeholder="Enter Name: " id="Name" name="Name" value=<%=Customer.Name%>>
+        <br>
+
+
+        <input type="text" placeholder="Enter Phone Number: " id="Phone" name="Phone" value=<%=Customer.Phone%>>
+        <br>
+
+
+        <input type="text" placeholder="Enter Email: " id="Email" name="Email" value=<%=Customer.Email%>>
+        <br>
+
+
+        <input type="text" placeholder="Enter Address: " id="Address" name="Address" value=<%=Customer.Address%>>
+        <br>
+
+
+        <input type="text" id="Password" name="Password" value=<%=Customer.Password%>>
+        <br>
+
+        <input type="submit" value="Update">
+        <a href="/Customer_Page">กลับ</a>
+    </form>
+    </div>
+
+
+</body>
+
+</html>

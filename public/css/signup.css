@@ -1,0 +1,56 @@
+body{
+    padding:50px;
+    background-color: #c9d6ff;
+}
+.container {
+    text-align: center;
+    max-width: 400px;;
+    padding: 0px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+form {
+    width: 500px;
+    padding:60px;
+    margin:0 auto 440px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.btn-signin{
+    left: auto;
+}
+input[type="submit"]{
+    background-color: black;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+input[type="submit"]:hover{
+    transition-duration: 0.2s;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+input[type="text"],textarea {
+    width: 100%; /* กำหนดให้ input และปุ่มมีความกว้างเต็มรูปแบบ */
+    padding: 10px; /* เพิ่ม padding เพื่อให้ input และปุ่มมีขนาดใหญ่ขึ้น */
+    margin-bottom: 10px; /* เพิ่ม margin-bottom เพื่อเพิ่มระยะห่างระหว่าง input และปุ่ม */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

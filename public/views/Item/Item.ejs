@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/itemDB.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>ข้อมูลสินค้าทั้งหมด</h1>
+        <table>
+            <tr>
+                <th>Product_Id</th>
+                <th>Customer Id</th>
+                <th>Customer Name</th>
+                <th>Name</th>
+                <th>Value</th>
+                <th>Action</th>
+            </tr>
+
+            <% for(let i = 0 ;i < Items.length ;i++){%>
+                <tr>
+                    <td>
+                        <%=Items[i].Product_Id%>
+                    </td>
+                    <td>
+                        <%=Items[i].Customer_Id%>
+                    </td>
+                    <td>
+                        <% for(let n = 0 ; n < Customers.length;n++) {%>
+                            <%if(Items[i].Customer_Id == Customers[n].Customer_Id) {%>
+                                <%= Customers[n].Name%>
+                                    <%break%>
+                                        <%}%>
+                                            <%}%>
+                    </td>
+                    <td>
+                        <%=Items[i].Name%>
+                    </td>
+                    <td>
+                        <%=Items[i].Value%>
+                    </td>
+                    <td>
+                        <a href="/Update_Item/<%=Items[i].Product_Id%>">Update</a>
+                        <a href="/Delete_Item/<%=Items[i].Product_Id%>">delete</a>
+                    </td>
+                </tr>
+                <%}%>
+        </table>
+        <a href="/admin">กลับไปหน้าแรก</a>
+        <br>
+    </div>
+
+
+</body>
+
+</html>

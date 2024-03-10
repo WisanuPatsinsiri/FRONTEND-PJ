@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/updateitem.css">
+</head>
+
+<body>
+    <form action="/Put_Item/<%= Item.Product_Id%>" method="post">
+        <h1>Update Product ID: <%= Item.Product_Id%></h1>
+        <input type="text" id="Name" name="Name" placeholder="Enter Name: " value=<%=Item.Name%>>
+        <br>
+        <input type="text" id="Value" name="Value" placeholder="Enter Value: " value=<%=Item.Value%>>
+        <br>
+        <input type="submit" value="Update">
+        <a href="/Item_Page">กลับ</a>
+    </form>
+</body>
+</html>

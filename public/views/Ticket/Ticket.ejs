@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/ticket.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 align="center">Ticket Database</h1>
+        <table>
+            <tr>
+                <th>Ticket_Id</th>
+                <th>Customer_Id</th>
+                <th>Product_Id</th>
+                <th>Employee_Id</th>
+                <th>Principle</th>
+                <th>Rate</th>
+                <th>Total</th>
+                <th>Action</th>
+            </tr>
+
+
+            <br>
+            <% for(let i = 0 ;i < Tickets.length ;i++){%>
+
+
+                <tr>
+                    <td>
+                        <%=Tickets[i].Pawn_ticket_Id%>
+                    </td>
+                    <td>
+                        <% for(let n = 0; n < Tickets.length;n++) {%>
+                            <%if(Tickets[i].Customer_Id == Customers[n].Customer_Id) {  %>
+                                <%=Customers[n].Name%>
+                                    <%break%>
+                                        <% }%>
+                                            <% }%>
+                    </td>
+                    <td>
+                        <% for(let n = 0; n < Tickets.length;n++) {%>
+                            <%if(Tickets[i].Product_Id == Items[n].Product_Id) {  %>
+                                <%=Items[n].Name%>
+                                    <%break%>
+                                        <% }%>
+                                            <% }%>
+
+                    </td>
+                    <td>
+                        <% for(let n = 0; n < Tickets.length;n++) {%>
+                            <%if(Tickets[i].Employee_Id == Employees[n].Employee_Id) {  %>
+                                <%=Employees[n].Name%>
+                                    <%break%>
+                                        <% }%>
+                                            <% }%>
+
+                    </td>
+                    <td>
+                        <%=Tickets[i].Principle%>
+
+                    </td>
+                    <td>
+                        <%=Tickets[i].Rate%>
+
+                    </td>
+                    <td>
+                        <%=Tickets[i].Total%>
+                    </td>
+                    <td>
+                        <a class="button" href="/Delete_Ticket/<%=Tickets[i].Pawn_ticket_Id%>">Delete</a>
+                    </td>
+                </tr>
+                <%}%>
+        </table>
+        <a href="/admin" class="button">กลับไปหน้าแรก</a>
+    </div>
+</body>
+
+</html>

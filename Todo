@@ -1,0 +1,28 @@
+จะต้องใส่สินค้าลงไปเพื่อให้มันทำตั๋วอัตนิมัติออกมาโดยที่ไม่ต้องเพิ่มอะไร เมื่อเข้าหน้าlogin มาก็จะมีปุ่มให้เลือก จำนำของ ลบประวัติการจำนำ ต่างๆ เมื่อเข้ามาหน้าจำนำก็จะให้ใส่ชื่อสินค้ากับราคาที่ต้องการ ระบบจะทำการคำนวณออกมาเป็นตั๋วมาให้อัติโนมัติ จะโชว์หน้าต่าง
+รหัสลูกค้า ชื่อลูกค้า ชื่อพนักงานที่ทำการตรวจสอบ เงินต้น เรท และเงินที่ต้องไถ่คืน โดยจะเอาเงินต้น ไปคูณตามเรท ราคาเช่น 100หล่ะ20 เมื่อเข้ามาดูประวัติการจำนำก็จะเจอ รหัสตั๋ว ชือสินค้า ชื่อลูกค้า รหัส เงินรวม นี้คือในส่วนของลูกค้า ดูในส่วนของ Admin ข้อมูลต่างๆ
+ก็จะขึ้นมาแบบ Database ทั้งหมด มีให้เลือกทั้ง ลูกค้า พนักงาน ตั๋ว สินค้า ..
+
+<% for(let i = 0; i < Item.length;i++) { %>
+
+                <tr>
+                    <th>Customer_Id</th>
+                    <th>Product_Id</th>
+                    <th>Employee_Id</th>
+                    <th>เงินต้น</th>
+                    <th>อัตราดอกเบี้ย</th>
+                    <th>เงินทั้งหมด</th>
+                </tr>
+
+
+                 app.post('/Data_Product', async(req, res) => {
+        const data_Product = {
+            Customer_Id: req.body.Customer_Id,
+            Name: req.body.Name,
+            Value: req.body.Value,
+        }
+        await axios.post(base_url + '/Item_Post', data_Product)
+        const respones = await axios.get(base_url + '/Customers')
+        res.render("Shop_Index", { Name: Name_Customer, Id: Id_Customer, Customers: respones.data })
+
+    })
+

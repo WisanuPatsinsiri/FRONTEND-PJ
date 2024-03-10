@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="../css/employee.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 align="center">ข้อมูลพนักงาน</h1>
+        <table>
+            <tr>
+                <th>Employee_Id</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Salary</th>
+                <th>Post</th>
+                <th>Actions</th>
+            </tr>
+            <% for(let i = 0 ;i < Employees.length ;i++){%>
+            <tr>
+                <td><%=Employees[i].Employee_Id%></td>
+                <td><%=Employees[i].Name%></td>
+                <td><%=Employees[i].Phone%></td>
+                <td><%=Employees[i].Salary%></td>
+                <td><%=Employees[i].Post%></td>
+                <td>
+                    <a href="/Update_Employee/<%= Employees[i].Employee_Id %>" class="button">Update</a>
+                    <a href="/Delete_Employee/<%= Employees[i].Employee_Id %>" class="button">Delete</a>
+                </td>
+            </tr>
+            <%}%>
+        </table>
+        <br><a href="/Create_Employee" class="button">เพิ่มพนักงาน</a>
+        <a href="/admin" class="button">กลับไปหน้าแรก</a>
+    </div>
+</body>
+
+</html>

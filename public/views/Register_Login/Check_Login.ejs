@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../css/checkLog.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Welcome to Check Login</h1>
+            <% var count_Name = 0 %>
+                <% var count_Password = 0 %>
+                    <% var index = 0 %>
+
+                        <% for(var i = 0; i < Customers.length; i++) { %>
+                            <% if(Customer.Name !== Customers[i].Name) { %>
+                                <% count_Name +=1 %>
+                                    <% } else { index = i }%>
+                                        <% if(Customer.Password !== Customers[i].Password) count_Password+=1 %>
+                                            <%}%>
+
+                                                <% if( count_Name != Customers.length) {%>
+                                                    <% if (count_Password != Customers.length ){ %>
+                                                        <a href="/Pawn_Shop">ยืนยันเข้าสู่ระบบ คุณ <%=Customers[index].Name %></a>
+                                                        <%} else{ %>
+                                                            <div class="error-message">รหัสผ่านไม่ถูกต้อง</div>
+                                                            <h1><a href="/Sign_in">กลับ</a></h1>
+                                                            <%}%>
+                                                                <%} else{ %>
+                                                                    <div class="error-message">ชื่อผู้ใช้ไม่ถูกต้องหรือยังไม่ได้ลงทะเบียน</div><br>
+                                                                    <a href="/Sign_in">กลับ</a>
+                                                                    <%}%>
+        </div>
+    </div>
+</body>
+
+</html>

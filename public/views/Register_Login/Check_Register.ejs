@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../css/checkregister.css">
+</head>
+<body>
+
+    <div class="container">
+    <center><% var Count = 0%>
+        <% for(var i = 0; i < Customers.length;i++) { %>
+            <% if(Customer.Name != Customers[i].Name )Count +=1  %>
+                <%}%>
+                    <% if(Count == Customers.length ){  %>
+                        <form action="/Confrim_Register" method="post">
+                            <h1>ยืนยันการลงทะเบียน</h1><br>
+                            <label for="Name"> Name</label>
+                            <input type="text" id="Name" name="Name" value=<%=Customer.Name%> readonly>
+                            <br>
+                            <label for="Phone">Phone</label>
+                            <input type="text" id="Phone" name="Phone" value=<%=Customer.Phone%> readonly>
+                            <br>
+
+                            <label for="Email">Email</label>
+                            <input type="text" id="Email" name="Email" value=<%=Customer.Email%> readonly>
+                            <br>
+
+                            <label for="Address">Addrsess</label>
+                            <input type="text" id="Address" name="Address" value=<%=Customer.Address%> readonly>
+                            <br>
+
+                            <label for="Password">Password</label>
+                            <input type="text" id="Password" name="Password" value=<%=Customer.Password%> readonly>
+                            <br>
+
+                            <input type="submit" value="ยืนยันการลงทะเบียน">
+                            <h1><a href="/Sign_up">กลับ</a></h1>
+                        </form>
+
+                        <%} else {%>
+                            <h1><a href="/Sign_up">ชื่อผู้ใช้ซ่ำกับคนอื่น</a></h1>
+                            <%}%></center>
+    </div>
+</body>
+</html>

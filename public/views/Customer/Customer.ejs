@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/customer.css">
+</head>
+
+<body>
+<div class="container">
+    <table>
+        <h1 align="center">
+        ข้อมูลลูกค้า
+        </h1>    
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Password</th>
+            <th>Action</th>
+        </tr>
+        <% for(var i = 0; i < Customers.length;i++) { %>
+            <tr>
+                <td>
+                    <%= Customers[i].Customer_Id %>
+                </td>
+                <td>
+                    <%= Customers[i].Name %>
+                </td>
+                <td>
+                    <%= Customers[i].Phone %>
+                </td>
+                <td>
+                    <%= Customers[i].Email %>
+                </td>
+                <td>
+                    <%= Customers[i].Address %>
+                </td>
+                <td>
+                    <%= Customers[i].Password %>
+                </td>
+                <td>
+                    <!--<a href="/Customer/<%= Customers[i].Customer_Id%>">view</a>-->
+                    <a class="button" href="/Update_Customer/<%= Customers[i].Customer_Id%>">Update</a>
+                    <a class="button" href="/delete/<%= Customers[i].Customer_Id%>">delete</a>
+                </td>
+            </tr>
+            <% } %>
+    </table>
+    <br>
+    <a class="button" href="/admin">กลับไปหน้าแรก</a>
+</div>
+    
+
+</body>
+
+</html>

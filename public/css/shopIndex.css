@@ -1,0 +1,94 @@
+body{
+background-color: #c9d6ff;
+}
+
+/* Styles for the button */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Active effect */
+.btn:active {
+    transform: translateY(1px);
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding-top: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Content styles */
+.content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.data-box {
+    background-color: #c9d6ff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px 20px; /* Adjust padding to your preference */
+    background-color: #333; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove border */
+}
+
+a:hover {
+    background-color: hsl(0, 0%, 100%); /* Change button background color on hover */
+    color: #000000;
+}
+
+.btn1 {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 5px;
+    background-color: #fff;
+    text-decoration: none;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+}
+
+.btn1:hover {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}

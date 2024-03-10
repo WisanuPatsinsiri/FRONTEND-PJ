@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/shopIndex.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <h2>Menu</h2>
+    <a href="/Employee_Page">พนักงาน</a>
+    <a href="/Item_Page">สินค้า</a>
+    <a href="/Ticket">ตั๋ว</a>
+    <a href="/Customer_Page">ลูกค้า</a>
+    <a href="/">Log Out</a>
+    </div>
+
+<div class="content">
+    <h1>Database</h1>
+    <% var Id_Customer = 0%>
+        <% for(let i = 0; i < Customers.length;i++) {%>
+            <% if(Name == Customers[i].Name ){%>
+                <div class="data-box">
+                    <p>ชื่อ: <%= Name%></p>
+                    <p>รหัสลูกค้า: <%= Customers[i].Customer_Id%></p>
+                    <% Id_Customer = Customers[i].Customer_Id %>
+                            <a class="btn1" href="/Pawn_Product/<%=Name%>/<%=Customers[i].Customer_Id%>">จำนำของ</a>
+                            <% break %>
+                                <%}%>
+                                    <%}%>
+
+                                        <a class="btn1" href="/Record_Pawn/<%=Id_Customer%>">ดูประวัติการจำนำ</a>
+
+                </div>
+                
+                    
+                        
+                                        
+</div>
+    
+
+</body>
+
+</html>
