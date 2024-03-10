@@ -10,33 +10,34 @@
 </head>
 
 <body>
-<div class="container">
-    <form action="/Register_Customer" method="post">
-    <center><h1> Sign up</h1></center>
-        <div class="from-group">
-            <input type="text" id="Name" name="Name" placeholder="Enter Name: " class="form-control" required>
-        </div><br>
-        <div class="from-group">
-            <input type="text" id="Phone" name="Phone" placeholder="Enter Phone: " class="form-control" required>
-        </div><br>
-        <div class="from-group">
-            <input type="text" id="Email" name="Email" placeholder="Enter Email: " class="form-control" required>
-        </div><br>
-        <div class="from-group">
-            <textarea class="form-control" id="Address" name="Address" rows="3" placeholder="Enter Address: " required></textarea>
-          </div><br>
-
-        <div class="from-group">
-            <input type="text" id="Password" name="Password" placeholder="Enter Password: " class="form-control" required>
-        </div><br>
-    <center><a href="/Sign_in">มีบัญชีอยู่แล้ว ? </a></center><br>
-        <div class="btn-signin">
-            <input type="submit" value="Sign up">
-         </div>
-    </form>
-</div>
-    
-
+    <div class="background-image">
+        <img src="images/PawnShop.jpeg" alt="Pawnshop">
+    </div>
+        <div class="container">
+            <form action="/Register_Customer" method="post">
+                <center><h1> สมัครสมาชิก</h1></center><br>
+                <div class="from-group">
+                    <input type="text" id="Name" name="Name" placeholder="Enter Name: " class="form-control" required>
+                </div><br>
+                <div class="from-group">
+                    <input type="text" id="Phone" name="Phone" placeholder="Enter Phone: " class="form-control" required>
+                </div><br>
+                <div class="from-group">
+                    <input type="text" id="Email" name="Email" placeholder="Enter Email: " class="form-control" required>
+                </div><br>
+                <div class="from-group">
+                    <textarea class="form-control" id="Address" name="Address" rows="3" placeholder="Enter Address: " required></textarea>
+                </div><br>
+                <div class="from-group">
+                    <input type="text" id="Password" name="Password" placeholder="Enter Password: " class="form-control" required>
+                </div><br>
+                <center><a href="/Sign_in">มีบัญชีอยู่แล้ว ? </a></center><br>
+                <div class="btn-signin">
+                    <center><input type="submit" value="Sign up"></center>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
