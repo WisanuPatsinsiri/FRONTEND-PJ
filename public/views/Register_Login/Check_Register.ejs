@@ -16,22 +16,22 @@
                     <% if(Count == Customers.length ){  %>
                         <form action="/Confrim_Register" method="post">
                             <h1>ยืนยันการลงทะเบียน</h1><br>
-                            <label for="Name"> Name</label>
+                            <label for="Name"> ชื่อ</label>
                             <input type="text" id="Name" name="Name" value=<%=Customer.Name%> readonly>
                             <br>
-                            <label for="Phone">Phone</label>
+                            <label for="Phone">เบอร์โทรศัพท์</label>
                             <input type="text" id="Phone" name="Phone" value=<%=Customer.Phone%> readonly>
                             <br>
 
-                            <label for="Email">Email</label>
+                            <label for="Email">อีเมล</label>
                             <input type="text" id="Email" name="Email" value=<%=Customer.Email%> readonly>
                             <br>
 
-                            <label for="Address">Addrsess</label>
+                            <label for="Address">ที่อยู่</label>
                             <input type="text" id="Address" name="Address" value=<%=Customer.Address%> readonly>
                             <br>
 
-                            <label for="Password">Password</label>
+                            <label for="Password">รหัสผ่าน</label>
                             <input type="text" id="Password" name="Password" value=<%=Customer.Password%> readonly>
                             <br>
 
