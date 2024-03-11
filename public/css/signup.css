@@ -9,13 +9,12 @@
 }
 
 body {
-    height: 100vh; /* Set body height to full viewport height */
+    height: 100vh; 
     margin: 0;
     padding: 0;
-    display: flex; /* Use flexbox to center content vertically and horizontally */
-    justify-content: center;
+    display: flex; 
     align-items: center;
-    background-color: #c9d6ff; /* Set background color */
+    background-color: #c9d6ff; 
 }
 
 .background-container {
