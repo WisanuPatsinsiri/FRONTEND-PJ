@@ -76,11 +76,12 @@
 
 .customerid {
     color: #fff;
+    margin-bottom: 15px;
     font-weight: 500;
     margin-left: 1.5rem;
     background-color: #553333; 
     padding: 0.5rem 1rem; 
-    border-radius: 8px; 
+    border-radius: 15px; 
     text-transform: uppercase;
     letter-spacing: 1.5px; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
