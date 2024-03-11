@@ -9,29 +9,33 @@
 </head>
 
 <body>
-    <div class="sidebar">
-        <h2>Menu</h2>
-    <a href="/">Log Out</a>
-    </div>
+    <div class="background-image">
+        <img src="images/kanistra-studio-19-pawnshop.jpg" alt="Pawnshop">
+        </div>
+    <header class="header">
+        <div class="logo">PawnShop</div>
 
-<div class="content">
-    <h1>ฐานข้อมูลลูกค้า</h1>
+
+
+        <div class="datafont">ฐานข้อมูลลูกค้า</div>
     <% var Id_Customer = 0%>
         <% for(let i = 0; i < Customers.length;i++) {%>
             <% if(Name == Customers[i].Name ){%>
-                <div class="data-box">
-                    <p>ชื่อ: <%= Name%></p>
+                <nav class="navbar">
+                    <div class="customerid">
+                    ชื่อ: <%= Name%>
                     <p>รหัสลูกค้า: <%= Customers[i].Customer_Id%></p>
+                    </div>
                     <% Id_Customer = Customers[i].Customer_Id %>
-                            <a class="btn1" href="/Pawn_Product/<%=Name%>/<%=Customers[i].Customer_Id%>">จำนำของ</a>
-                            <% break %>
-                                <%}%>
-                                    <%}%>
-
-                                        <a class="btn1" href="/Record_Pawn/<%=Id_Customer%>">ดูประวัติการจำนำ</a>
-
-                </div>            
-            </div>
-</body>
-
+                    <a href="/Pawn_Product/<%=Name%>/<%=Customers[i].Customer_Id%>">จำนำของ</a>
+                    <% break %>
+                    <%}%>
+                    <%}%>
+                    <a href="/Record_Pawn/<%=Id_Customer%>">ดูประวัติการจำนำ</a>
+                    <a href="/">Log Out</a>
+                    </header>
+                </nav>
+            </div>            
+        </div>
+    </body>
 </html>
