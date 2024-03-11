@@ -16,14 +16,14 @@ body {
 }
 
 .background-container {
-    position: relative;
+    position: fixed;
     max-width: 400px;
     border-radius: 5px;
     overflow: hidden; 
 }
 
 .background-image {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
