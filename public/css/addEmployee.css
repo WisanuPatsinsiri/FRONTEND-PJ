@@ -1,12 +1,15 @@
 body {
-    background-color: #c9d6ff;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+
+    background-image: url('https://i.pinimg.com/564x/b8/d7/56/b8d7563fcd90b660f05358844380171b.jpg');
+    background-color: #c9d6ff;
+    height: 90vh;
+    background-position: center;
 }
 
 form {

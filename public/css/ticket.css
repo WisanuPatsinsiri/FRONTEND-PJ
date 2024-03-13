@@ -1,8 +1,12 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #c9d6ff;
+
     margin: 0;
     padding: 20px;
+    background-image: url('https://i.pinimg.com/564x/d0/3e/49/d03e491e68d49f29cf23b204bc84baff.jpg');
+    background-color: #c9d6ff;
+    height: 90vh;
+    background-position: center;
 }
 
 .container {

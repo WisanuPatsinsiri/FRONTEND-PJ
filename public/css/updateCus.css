@@ -1,8 +1,12 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #c9d6ff;
+    
     margin: 0;
     padding: 20px;
+    background-image: url('https://i.pinimg.com/564x/43/9b/31/439b31c65fd26217aed052805c593fab.jpg');
+    background-color: #c9d6ff;
+    height: 90vh;
+    background-position: center;
 }
 
 form {
@@ -25,7 +29,7 @@ input[type="text"] {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 input[type="submit"] {

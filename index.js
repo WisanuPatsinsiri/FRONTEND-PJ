@@ -194,8 +194,7 @@ function Customer() {
 
         Name_Customer = req.body.Name
         await axios.put(base_url + '/Customer_Update/' + req.params.Customer_Id, data_Customer)
-        const respones_Cus = await axios.get(base_url + '/Customers')
-        res.render("Shop_Index", { Name: Name_Customer, Customers: respones_Cus.data })
+        res.redirect("/Customer_Page")
     })
 
     app.get('/delete/:Customer_Id', async(req, res) => {
