@@ -15,6 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(__dirname + '/public'))
 var Name_Customer
 var Id_Customer
+var random_id
 
 function Register_Login() {
     app.get('/', (req, res) => res.render("Register_Login/index"))
@@ -81,13 +82,12 @@ function Register_Login() {
                 Name: req.body.Name,
                 Password: req.body.Password
             }
-            Name_Customer = data_login.Name
-
-            const respones = await axios.get(base_url + '/Customers')
-            res.render("Register_Login/Check_Login", { Customer: data_login, Customers: respones.data })
-
-
-
+            if (data_login.Name == 'Admin' && data_login.Password == '11') res.render('admin')
+            else {
+                Name_Customer = data_login.Name
+                const respones = await axios.get(base_url + '/Customers')
+                res.render("Register_Login/Check_Login", { Customer: data_login, Customers: respones.data })
+            }
 
         } catch (err) {
             console.error(err)
@@ -99,7 +99,6 @@ function Register_Login() {
 function Pawn_Product() {
     app.get('/Pawn_Product/:Name/:Id', async(req, res) => {
         Id_Customer = req.params.Id
-
         const respones_Employee = await axios.get(base_url + '/Employees')
         res.render("Pawn_Product/Pawn_Product", { Name: req.params.Name, Id: req.params.Id, Employees: respones_Employee.data })
 
@@ -114,16 +113,31 @@ function Pawn_Product() {
             Status: req.body.Status
 
         }
+
+        const respones_Employee = await axios.get(base_url + '/Employees')
+
+        let min = respones_Employee.data.length - respones_Employee.data.length
+        let max = respones_Employee.data.length - 1
+        random_id = Math.floor(Math.random() * (max - min + 1)) + min
+
         data_Product.Status = 'False'
+        data_Product.Customer_Id = Id_Customer
+        data_Product.Employee_Id = respones_Employee.data[random_id].Employee_Id
+
+
         await axios.post(base_url + '/Item_Post', data_Product)
         const respones_Item = await axios.get(base_url + '/Items')
-        const respones_Employee = await axios.get(base_url + '/Employees')
         res.render("Pawn_Product/Ticket_Pawn", {
             Id_Customer: Id_Customer,
+            Name: Name_Customer,
+            Id_Employee: random_id,
             Item: respones_Item.data,
             Employee: respones_Employee.data
         })
+
+
     })
+
 
     app.get('/Record_Pawn/:Customer_Id', async(req, res) => {
         const respones_Item = await axios.get(base_url + '/Items')
@@ -146,6 +160,11 @@ function Pawn_Product() {
             Rate: req.body.Rate,
             Total: req.body.Total
         }
+        const respones = await axios.get(`${base_url}/Items`)
+        data_ticket.Customer_Id = Id_Customer
+        data_ticket.Product_Id = respones.data[respones.data.length - 1].Product_Id
+        data_ticket.Employee_Id = random_id
+
         await axios.post(base_url + '/Ticket_Post', data_ticket)
         res.redirect("/Pawn_Shop")
     })
@@ -330,11 +349,10 @@ function Ticket() {
 }
 
 function admin() {
+
     app.get('/admin', async(req, res) => {
-        res.render('admin')
+        res.render("admin")
     })
-
-
     app.get('/Check_Pawn', async(req, res) => {
         const respones_items = await axios.get(base_url + '/Items')
         const respones_Customers = await axios.get(base_url + '/Customers')

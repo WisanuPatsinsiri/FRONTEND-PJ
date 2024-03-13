@@ -9,52 +9,52 @@
 
 <body>
 
-    <% var min =  Employee[0].Employee_Id%>
-        <% var max =  Employee[Employee.length-1].Employee_Id%>
-            <%const randomInRange = Math.floor(Math.random() * (max - min + 1)) + min%>
+    <% var value = [1000,3000,5000,7000] %>
+        <% var rate = [0.1,0.2,0.3,0.4,0.5] %>
+            <% var Rate  %>
+                <% var Total  %>
 
-                <% var value = [1000,3000,5000,7000] %>
-                    <% var rate = [0.1,0.2,0.3,0.4,0.5] %>
-                        <% var Rate  %>
-                            <% var Total  %>
-                                <%for(let i =0; i< value.length;i++){%>
-                                    <%  if( Item[Item.length-1].Value < value[i] ){ %>
-                                        <% Rate = rate[i] %>
-                                            <%break%>
-                                                <%}%>
-                                                    <% if(Item[Item.length-1].Value >= 7000) Rate = rate[4] %>
-                                                        <%}%>
-                                                            <% Total = Item[Item.length-1].Value * Rate %>
-                                                                <% Total += Item[Item.length-1].Value %>
 
-                                                                    <form action="/Ticket_Pawn" method="post">
+                    <%for(let i =0; i< value.length;i++){%>
+                        <%  if( Item[Item.length-1].Value < value[i] ){ %>
+                            <% Rate = rate[i] %>
+                                <%break%>
+                                    <%}%>
+                                        <% if(Item[Item.length-1].Value >= 7000) Rate = rate[4] %>
+                                            <%}%>
+                                                <% Total = Item[Item.length-1].Value * Rate %>
+                                                    <% Total += Item[Item.length-1].Value %>
 
-                                                                        <label for="Customer_Id"> รหัสลูกค้า</label>
-                                                                        <input type="text" id="Customer_Id" name="Customer_Id" value="<%= Id_Customer %>">
-                                                                        <br>
+                                                        <form action="/Ticket_Pawn" method="post">
 
-                                                                        <label for="Product_Id"> รหัสสินค้า</label>
-                                                                        <input type="text" id="Product_Id" name="Product_Id" value="<%=  Item[Item.length-1].Product_Id %>">
-                                                                        <br>
+                                                            <label for="Customer_Id"> ชื่อลูกค้า</label>
+                                                            <input type="text" id="Customer_Id" name="Customer_Id" value="<%= Name %>">
+                                                            <br>
 
-                                                                        <label for="Employee_Id"> รหัสพนักงาน</label>
-                                                                        <input type="text" id="Employee_Id" name="Employee_Id" value="<%= randomInRange %>">
-                                                                        <br>
+                                                            <label for="Product_Id"> ชื่อสินค้า</label>
 
-                                                                        <label for="Principle"> เงินต้น</label>
-                                                                        <input type="text" id="Principle" name="Principle" value="<%= Item[Item.length-1].Value %>">
-                                                                        <br>
+                                                            <input type="text" id="Product_Id" name="Product_Id" value="<%=  Item[Item[Item.length-1].Product_Id-1].Name  %>">
 
-                                                                        <label for="Rate"> อัตราดอกเบี้ย</label>
-                                                                        <input type="text" id="Rate" name="Rate" value="<%= Rate%>">
-                                                                        <br>
+                                                            <br>
 
-                                                                        <label for="Total"> เงินรวม</label>
-                                                                        <input type="text" id="Total" name="Total" value="<%= Total%>">
-                                                                        <br>
-                                                                        <input type="submit" value="ยืนยันการจำนำ">
+                                                            <label for="Employee_Id"> ชื่อผู้ทำการตรวจสอบ</label>
+                                                            <input type="text" id="Employee_Id" name="Employee_Id" value="<%= Employee[Id_Employee].Name %>">
 
-                                                                    </form>
+                                                            <br>
+                                                            <label for="Principle"> เงินต้น</label>
+                                                            <input type="text" id="Principle" name="Principle" value="<%= Item[Item.length-1].Value %>">
+                                                            <br>
+
+                                                            <label for="Rate"> อัตราดอกเบี้ย</label>
+                                                            <input type="text" id="Rate" name="Rate" value="<%= Rate%>">
+                                                            <br>
+
+                                                            <label for="Total"> เงินรวม</label>
+                                                            <input type="text" id="Total" name="Total" value="<%= Total%>">
+                                                            <br>
+                                                            <input type="submit" value="ยืนยันการจำนำ">
+
+                                                        </form>
 
 </body>
 

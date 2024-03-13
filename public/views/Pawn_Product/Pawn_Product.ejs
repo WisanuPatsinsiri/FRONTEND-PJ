@@ -6,110 +6,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-body {
-    font-family: Arial, sans-serif;
-    background-color: #c9d6ff;
-    margin: 0;
-    padding: 20px;
-}
-
-form {
-    max-width: 400px;
-    margin: 79px auto 650px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-label {
-    margin-bottom: 5px;
-    display: block;
-}
-
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-input[type="submit"] {
-    display: inline-block;
-    padding: 5px 8px;
-    margin-right: 5px;
-    font-size: 16px;
-    background-color: #fff;
-    text-decoration: none;
-    color: #007bff;
-    border: 1px solid #007bff;
-    border-radius: 5px;
-}
-
-input[type="submit"]:hover {
-    background-color: #007bff;
-    color: #fff;
-    border-color: #007bff;
-}
-
-a {
-    display: inline-block;
-    padding: 5px 10px;
-    margin-right: 5px;
-    text-decoration: none;
-    color: #007bff;
-    border: 1px solid #007bff;
-    border-radius: 5px;
-}
-
-a:hover {
-    background-color: #007bff;
-    color: #fff;
-    border-color: #007bff;
-}
-
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #c9d6ff;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        form {
+            max-width: 400px;
+            margin: 79px auto 650px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        label {
+            margin-bottom: 5px;
+            display: block;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+        input[type="submit"] {
+            display: inline-block;
+            padding: 5px 8px;
+            margin-right: 5px;
+            font-size: 16px;
+            background-color: #fff;
+            text-decoration: none;
+            color: #007bff;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #007bff;
+            color: #fff;
+            border-color: #007bff;
+        }
+        
+        a {
+            display: inline-block;
+            padding: 5px 10px;
+            margin-right: 5px;
+            text-decoration: none;
+            color: #007bff;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+        }
+        
+        a:hover {
+            background-color: #007bff;
+            color: #fff;
+            border-color: #007bff;
+        }
     </style>
 </head>
+
 <body>
 
-            <%if(Employees.length == 0) { %>
+    <%if(Employees.length == 0) { %>
         โปรดเพิ่มข้อมูลพนักงาน
         <%}else{%>
-            <% var min =  Employees[0].Employee_Id%>
-                <% var max =  Employees[Employees.length-1].Employee_Id%>
-                    <%const randomInRange = Math.floor(Math.random() * (max - min + 1)) + min%>
 
 
-                        <form action="/Data_Product" method="post">
 
-                            <label for="Customer_Id"> รหัสลูกค้า: </label>
-                            <input type="text" id="Customer_Id" name="Customer_Id" value="<%=Id%>">
-                            <br>
-                            <label for="Employee_Id"> รหัสพนักงาน: </label>
-                            <input type="text" id="Employee_Id" name="Employee_Id" value="<%=randomInRange%>">
-                            <br>
-
-                            <label for="Name"> ชื่อสินค้า: </label>
-                            <input type="text" id="Name" name="Name">
-                            <br>
+            <form action="/Data_Product" method="post">
 
 
-                            <label for="Value">ราคาที่ต้องการ: </label>
-                            <input type="text" id="Value" name="Value">
-                            <br>
 
-                            
-                            <input type="submit" value="ส่งข้อมูลการจำนำ">
-                            <a class="button" href="/admin">กลับไปหน้าแรก</a>
-                        </form>
-                        <%}%>
+                <label for="Name"> ชื่อสินค้า: </label>
+                <input type="text" id="Name" name="Name">
+                <br>
+
+
+                <label for="Value">ราคาที่ต้องการ: </label>
+                <input type="text" id="Value" name="Value">
+                <br>
+
+
+                <input type="submit" value="ส่งข้อมูลการจำนำ">
+                <a class="button" href="/Pawn_Shop">กลับไปหน้าแรก</a>
+            </form>
+            <%}%>
 
 
 </body>
