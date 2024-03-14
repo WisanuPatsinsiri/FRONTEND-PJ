@@ -34,27 +34,27 @@
                                                                         <tr>
                                                                             <th>
                                                                                 <label for="Customer_Id"> รหัสลูกค้า</label>
-                                                                                <input type="text" id="Customer_Id" name="Customer_Id" value="<%= Id_Customer %>">
+                                                                                <input type="text" id="Customer_Id" name="Customer_Id" value="<%= Id_Customer %>" readonly>
                                                                                 <br>
                                                                             
                                                                                 <label for="Product_Id"> รหัสสินค้า</label>
-                                                                                <input type="text" id="Product_Id" name="Product_Id" value="<%=  Item[Item.length-1].Product_Id %>">
+                                                                                <input type="text" id="Product_Id" name="Product_Id" value="<%=  Item[Item.length-1].Product_Id %>" readonly>
                                                                                 <br>
 
                                                                                 <label for="Employee_Id"> รหัสพนักงาน</label>
-                                                                                <input type="text" id="Employee_Id" name="Employee_Id" value="<%= randomInRange %>">
+                                                                                <input type="text" id="Employee_Id" name="Employee_Id" value="<%= randomInRange %>" readonly>
                                                                                 <br>
 
                                                                                 <label for="Principle"> เงินต้น</label>
-                                                                                <input type="text" id="Principle" name="Principle" value="<%= Item[Item.length-1].Value %>">
+                                                                                <input type="text" id="Principle" name="Principle" value="<%= Item[Item.length-1].Value %>" readonly>
                                                                                 <br>
 
                                                                                 <label for="Rate"> อัตราดอกเบี้ย</label>
-                                                                                <input type="text" id="Rate" name="Rate" value="<%= Rate%>">
+                                                                                <input type="text" id="Rate" name="Rate" value="<%= Rate%>" readonly>
                                                                                 <br>
 
                                                                                 <label for="Total"> เงินรวม</label>
-                                                                                <input type="text" id="Total" name="Total" value="<%= Total%>">
+                                                                                <input type="text" id="Total" name="Total" value="<%= Total%>" readonly>
                                                                                 <br>
                                                                                 
                                                                                 <input class="button"type="submit" value="ยืนยันการจำนำ">
