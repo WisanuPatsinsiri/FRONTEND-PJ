@@ -5,20 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/Checkpawn.css">
 </head>
 
-<body>
-
-
+<body><br>
+    <div class="background-image">
+        <img src="images/kanistra-studio-19-pawnshop.jpg" alt="Pawnshop">
+        </div>
+    
+                <h1><center>สินค้าที่รอการตรวจสอบจากเจ้าหน้าที่</center></h1>
     <table>
         <tr>
-            <th>Number</th>
-            <th>Customer Id</th>
-            <th>Customer Name</th>
-            <th>Name</th>
-            <th>Value</th>
-            <th>Status</th>
-            <th>Confirm</th>
+            <th>รหัสสินค้า</th>
+            <th>รหัสลูกค้า</th>
+            <th>ชื่อลูกค้า</th>
+            <th>ชื่อสินค้า</th>
+            <th>ราคา</th>
+            <th>สถานะ</th>
+            <th>ยืนยัน</th>
         </tr>
         <% var Count = 1%>
             <% for(let i = 0; i < Items.length; i++){%>
@@ -61,8 +65,8 @@
                 </tr>
                 <%}%>
                     <%}%>
-    </table>
-    <a href="/admin">กลับ</a>
+    </table><br>
+    <center><a href="/admin">กลับไปยังหน้าหลัก</a></center>
 
 </body>
 

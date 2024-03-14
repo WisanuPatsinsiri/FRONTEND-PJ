@@ -1,7 +1,9 @@
 /* Set font family and size for the whole page */
+
 body {
     background-color: #c9d6ff;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: "K2D", sans-serif;
     font-size: 16px;
   }
   
